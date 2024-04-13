@@ -44,14 +44,12 @@ class UploadView extends View {
       '.ingredient__container--input'
     );
 
-    console.log(containersIngs);
     const ingsArray = [...containersIngs].map(container => {
       const containerChildren = [...container.children];
       const rightFormat = containerChildren.map(input => {
         return input.value.replace(',', '.');
       });
 
-      console.log(rightFormat);
       return rightFormat.join(',');
     });
 
