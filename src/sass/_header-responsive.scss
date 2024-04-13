@@ -1,0 +1,45 @@
+@media (max-width: 730px) {
+  html {
+    font-size: 45%;
+  }
+  .header {
+    flex-wrap: wrap;
+    width: 100vw;
+  }
+  .header__logo {
+    margin-left: 1rem;
+  }
+  .search {
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    display: block;
+  }
+
+  .header {
+    padding: 10px 8px;
+    padding-bottom: 0;
+  }
+
+  .search {
+    margin-top: 10px;
+    width: 100%;
+    order: 2;
+    justify-content: center;
+    padding: 4px;
+    margin-top: 40px;
+  }
+  .search__field {
+    width: auto;
+    padding: 4px;
+    font-size: 16px;
+  }
+
+  .copyright {
+    margin-top: 2rem;
+    padding: 0 1rem;
+  }
+}

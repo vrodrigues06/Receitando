@@ -1,0 +1,50 @@
+import View from './View';
+import icons from 'url:../../img/icons.svg';
+
+class AddRecipeView extends View {
+  _parentEl = document.querySelector('.upload');
+  _window = document.querySelector('.add-recipe-window');
+  _overlay = document.querySelector('.overlay');
+  _btnOpen = document.querySelector('.nav__btn--add-recipe');
+  _btnClose = document.querySelector('.btn--close-modal');
+  _navList = document.querySelector('.nav__list');
+  _message = 'Receita Adicionada com sucesso!';
+
+  constructor() {
+    super();
+    this._addHandlerShowModal();
+    this._addHandlerHideModal();
+  }
+
+  toggleWindow() {
+    this._overlay.classList.toggle('hidden');
+    this._window.classList.toggle('hidden');
+    this._navList.classList.add('closing');
+    this._navList.classList.remove('ativo');
+  }
+
+  _addHandlerShowModal() {
+    this._btnOpen.addEventListener('click', this.toggleWindow.bind(this));
+  }
+
+  _addHandlerHideModal() {
+    this._btnClose.addEventListener('click', this.toggleWindow.bind(this));
+    this._overlay.addEventListener('click', this.toggleWindow.bind(this));
+  }
+
+  addHandlerUpload(handler) {
+    this._parentEl.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Modern way to handle with forms
+
+      const dataArr = [...new FormData(this)];
+      const data = Object.fromEntries(dataArr);
+      handler(data);
+    });
+  }
+
+  _generateHtml() {}
+}
+
+export default new AddRecipeView();

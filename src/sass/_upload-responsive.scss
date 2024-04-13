@@ -1,0 +1,34 @@
+@media (max-width: 850px) {
+  .add-recipe-window {
+    width: auto;
+  }
+  .upload {
+    grid-template-columns: 1fr;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 98vh;
+  }
+
+  .upload__btn {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 500px) {
+  .add-recipe-window {
+    width: 380px;
+    padding: 2rem 4rem;
+  }
+
+  .upload__column {
+    column-gap: 0.5rem;
+    grid-template-columns: 0.8fr 2.8fr;
+  }
+
+  .upload__heading {
+    max-width: 340px;
+  }
+  .ingredient__container--input {
+    grid-template-columns: 40px 50px 80px;
+  }
+}

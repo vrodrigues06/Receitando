@@ -1,0 +1,122 @@
+#btn-mobile {
+  display: none;
+  background-color: #fecaca;
+  padding: 10px 16px;
+  border-radius: 15px;
+  color: #dc2626;
+  cursor: pointer;
+  gap: 8px;
+  z-index: 100;
+  border: none;
+  position: relative;
+}
+
+#btn-mobile:hover {
+  background-color: #fca5a5;
+}
+
+#btn-mobile.ativo {
+  background-color: #fca5a5;
+}
+
+#hamburguer {
+  transition: transform 0.4s;
+  border-top: 2.5px solid;
+  width: 20px;
+  display: block;
+  border-radius: 1px 1px 0 0;
+}
+
+#hamburguer::after,
+#hamburguer::before {
+  content: '';
+  width: 20px;
+  height: 2.5px;
+  display: block;
+  background-color: #dc2626;
+  margin-top: 5px;
+  border-radius: 4px;
+}
+
+@media (max-width: 1130px) {
+  .nav {
+    align-self: center;
+    position: relative;
+  }
+  .nav__list {
+    display: none;
+    position: absolute;
+    background-color: #fecaca;
+    border-radius: 4px;
+    height: 80px;
+    top: 45px;
+    z-index: 200;
+    width: auto;
+    right: -24px;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .nav__list::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -10px;
+    right: 40px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fecaca;
+  }
+
+  .nav__list.closing {
+    display: flex;
+    animation: hideright 0.5s forwards;
+    pointer-events: none;
+  }
+
+  .nav__list.ativo {
+    display: flex;
+    animation: showleft 0.5s forwards;
+  }
+
+  @keyframes showleft {
+    from {
+      opacity: 0;
+      transform: translate3d(40px, 0, 0);
+    }
+
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0px, 0);
+    }
+  }
+
+  @keyframes hideright {
+    from {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    to {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+  }
+
+  #btn-mobile {
+    display: block;
+    // align-items: center;
+  }
+}
+
+@media (max-width: 730px) {
+  .nav__list {
+    right: 0;
+    height: 40px;
+  }
+
+  .nav__list::before {
+    right: 16px;
+  }
+}

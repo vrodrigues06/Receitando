@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700" rel="stylesheet">
+  <link rel="shortcut icon" href="/favicon.8b2f57bf.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="/index.f7626f62.css">
+  <script defer="" src="/index.e37f48ea.js"></script>
+  <script defer="" src="/index.8a4317a2.js"></script>
+
+  <title>Receitando | Procure por mais de 1000 Receitas</title>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <a href="#"><img src="/logo.726d37a8.png" alt="Logo" class="header__logo"> </a>
+      <form class="search">
+        <input type="text" class="search__field" placeholder="Busque por mais de 1000 receitas...">
+        <button class="btn search__btn">
+          <svg class="search__icon">
+            <use href="/icons.21bad73c.svg#icon-search"></use>
+          </svg>
+          <span>Procurar</span>
+        </button>
+      </form>
+
+      <nav class="nav">
+        <button id="btn-mobile" aria-expanded="false" aria-controls="menu">
+          <span id="hamburguer"></span>
+        </button>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <button class="nav__btn nav__btn--add-recipe">
+              <svg class="nav__icon">
+                <use href="/icons.21bad73c.svg#icon-edit"></use>
+              </svg>
+              <span>Adicionar Receita</span>
+            </button>
+          </li>
+          <li class="nav__item">
+            <button class="nav__btn nav__btn--bookmarks">
+              <svg class="nav__icon">
+                <use href="/icons.21bad73c.svg#icon-bookmark"></use>
+              </svg>
+              <span>Favoritas</span>
+            </button>
+            <div class="bookmarks">
+              <ul class="bookmarks__list">
+                <div class="message">
+                  <div>
+                    <svg>
+                      <use href="/icons.21bad73c.svg#icon-smile"></use>
+                    </svg>
+                  </div>
+                  <p>
+                    Ainda não há favoritos. Encontre uma boa receita e marque-a :)
+                  </p>
+                </div>
+
+                <!-- <li class="preview">
+                    <a class="preview__link" href="#23456">
+                      <figure class="preview__fig">
+                        <img src="src/img/test-1.jpg" alt="Test" />
+                      </figure>
+                      <div class="preview__data">
+                        <h4 class="preview__name">
+                          Pasta with Tomato Cream ...
+                        </h4>
+                        <p class="preview__publisher">The Pioneer Woman</p>
+                      </div>
+                    </a>
+                  </li> -->
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="search-results">
+      <ul class="results"></ul>
+
+      <div class="pagination"> </div>
+
+      <p class="copyright">
+        &copy; Criado por
+        <a class="linkedin-link" target="_blank" href="https://www.linkedin.com/in/vitor-rodrigues06/">Vitor Rodrigues</a>.
+      </p>
+    </div>
+
+    <div class="recipe">
+      <div class="message">
+        <div>
+          <svg>
+            <use href="/icons.21bad73c.svg#icon-smile"></use>
+          </svg>
+        </div>
+        <p>Comece procurando por uma receita ou um ingrediente. Divirta-se!</p>
+      </div>
+
+
+
+    </div>
+  </div>
+
+  <div class="overlay hidden"></div>
+  <div class="add-recipe-window hidden">
+    <button class="btn--close-modal">&times;</button>
+    <form class="upload">
+      <div class="upload__column">
+        <h3 class="upload__heading">Dados de Receita</h3>
+        <label>Receita</label>
+        <input value="" required="" name="title" type="text">
+        <label>Link</label>
+        <input value="" required="" name="sourceUrl" placeholder="link da receita completa..." type="text">
+        <label>Link Imagem</label>
+        <input value="" required="" name="image" type="text">
+        <label>Autor</label>
+        <input value="" required="" name="publisher" type="text">
+        <label>Tempo Preparo</label>
+        <input value="" required="" name="cookingTime" placeholder="Formato: 'xx'" type="number">
+        <label>Porções</label>
+        <input value="" required="" name="servings" placeholder="Formato: 'xx'" type="number">
+      </div>
+
+      <div class="upload__column ingredients">
+        <h3 class="upload__heading ingredients--header">Ingredientes
+          <button class="add-ingredients" title="">
+            <svg>
+              <use href="/icons.21bad73c.svg#icon-plus-circle"></use>
+            </svg>
+          </button>
+        </h3>
+        <label>Ingrediente</label>
+        <div class="ingredient__container--input">
+          <input class="qtd" value="" placeholder="qtd" type="text" name="ingredient-qtd" step="0,5">
+          <select name="ingredient-unit">
+            <option selected="" value="">un.</option>
+            <option value="kg">kg</option>
+            <option value="g">g</option>
+            <option value="ml">ml</option>
+            <option value="L">L</option>
+          </select>
+          <input class="ing-name" value="" type="text" placeholder="ingrediente" required="" name="ingredient">
+        </div>
+        <label>Ingrediente</label>
+        <div class="ingredient__container--input">
+          <input class="qtd" value="" placeholder="qtd" type="text" name="ingredient-qtd">
+          <select name="ingredient-unit">
+            <option selected="" value="">un.</option>
+            <option value="kg">kg</option>
+            <option value="g">g</option>
+            <option value="ml">ml</option>
+            <option value="L">L</option>
+          </select>
+          <input class="ing-name" value="" type="text" placeholder="ingrediente" required="" name="ingredient">
+        </div>
+        <label>Ingrediente</label>
+        <div class="ingredient__container--input">
+          <input class="qtd" value="" placeholder="qtd" type="text" name="ingredient-qtd">
+          <select name="ingredient-unit">
+            <option selected="" value="">un.</option>
+            <option value="kg">kg</option>
+            <option value="g">g</option>
+            <option value="ml">ml</option>
+            <option value="L">L</option>
+          </select>
+          <input class="ing-name" value="" type="text" placeholder="ingrediente" required="" name="ingredient">
+        </div>
+        <!-- <label>Ingrediente</label>
+        <div class="ingredient__container--input">
+          <input class="qtd" value="" placeholder="qtd" type="text" required name="ingredient-qtd" />
+          <select name="ingredient-unit">
+            <option selected value="">un.</option>
+            <option value="kg">kg</option>
+            <option value="g">g</option>
+            <option value="ml">ml</option>
+            <option value="L">L</option>
+          </select>
+          <input class="ing-name" value="" type="text" placeholder="ingrediente" required name="ingredient" />
+        </div> -->
+
+      </div>
+
+      <button class="btn upload__btn">
+        <svg>
+          <use href="/icons.21bad73c.svg#icon-upload-cloud"></use>
+        </svg>
+        <span>Criar Receita</span>
+      </button>
+    </form>
+  </div>
+</body>
+
+</html>

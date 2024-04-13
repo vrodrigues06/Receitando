@@ -1,0 +1,6 @@
+node_modules/
+Planning/
+.prettierrc
+.parcel-cache/
+.tmp.drivedownload/
+.tmp.driveupload/
