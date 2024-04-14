@@ -635,6 +635,9 @@ const controlRecipes = async function() {
         await _modelJs.loadRecipe(id);
         // Rendering Recipe
         (0, _recipeViewJsDefault.default).render(_modelJs.state.recipe);
+        document.getElementById("recipe").scrollIntoView({
+            behavior: "smooth"
+        });
     // Handling with errors
     } catch (err) {
         (0, _recipeViewJsDefault.default).renderError();
@@ -2002,7 +2005,7 @@ const getSearchResultsPage = function(page = state.search.page) {
 };
 const updateServings = function(newServings) {
     state.recipe.ingredients.forEach((ing)=>{
-        ing.quantity = ing.quantity * newServings / state.recipe.servings;
+        ing.quantity = (ing.quantity * newServings / state.recipe.servings).toFixed(2);
     });
     state.recipe.servings = newServings;
 };
@@ -2155,6 +2158,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _viewJs = require("./View.js");
 var _viewJsDefault = parcelHelpers.interopDefault(_viewJs);
+// import { Fraction } from 'fractional';
 var _iconsSvg = require("url:../../img/icons.svg");
 var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
 class RecipeView extends (0, _viewJsDefault.default) {

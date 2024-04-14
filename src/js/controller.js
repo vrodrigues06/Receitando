@@ -56,7 +56,7 @@ const controlRecipes = async function () {
 
     // Rendering Recipe
     recipeView.render(model.state.recipe);
-
+    document.getElementById('recipe').scrollIntoView({ behavior: 'smooth' });
     // Handling with errors
   } catch (err) {
     recipeView.renderError();

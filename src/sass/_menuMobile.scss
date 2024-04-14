@@ -1,6 +1,6 @@
 #btn-mobile {
   display: none;
-  background-color: #fecaca;
+  background-color: #fef2f2;
   padding: 10px 16px;
   border-radius: 15px;
   color: #dc2626;
@@ -12,11 +12,11 @@
 }
 
 #btn-mobile:hover {
-  background-color: #fca5a5;
+  background-color: #fecaca;
 }
 
 #btn-mobile.ativo {
-  background-color: #fca5a5;
+  background-color: #fecaca;
 }
 
 #hamburguer {
@@ -46,7 +46,7 @@
   .nav__list {
     display: none;
     position: absolute;
-    background-color: #fecaca;
+    background-color: #fee2e2;
     border-radius: 4px;
     height: 80px;
     top: 45px;

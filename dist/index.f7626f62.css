@@ -30,7 +30,7 @@ body {
 }
 
 .container {
-  background-color: #fff;
+  background-color: #f9fafb;
   border-radius: 9px;
   grid-template: "head head" 10rem
                  "list recipe" minmax(100rem, auto)
@@ -103,7 +103,7 @@ body {
 .btn--inline {
   color: #dc2626;
   cursor: pointer;
-  background-color: #fee2e2;
+  background-color: #f9fafb;
   border: none;
   border-radius: 10rem;
   align-items: center;
@@ -260,7 +260,7 @@ body {
 }
 
 .header {
-  background-color: #fee2e2;
+  background-color: #f9fafb;
   grid-area: head;
   justify-content: space-between;
   align-items: center;
@@ -353,7 +353,7 @@ body {
 }
 
 .nav__btn:hover {
-  background-color: #fca5a5;
+  background-color: #fee2e2;
 }
 
 .bookmarks {
@@ -401,12 +401,12 @@ body {
 }
 
 .preview__link:hover {
-  background-color: #fee2e2;
+  background-color: #f9fafb;
   transform: translateY(-2px);
 }
 
 .preview__link--active {
-  background-color: #fee2e2;
+  background-color: #f9fafb;
 }
 
 .preview__fig {
@@ -526,7 +526,7 @@ body {
 }
 
 .recipe {
-  background-color: #fee2e2;
+  background-color: #f9fafb;
 }
 
 .recipe__fig {
@@ -635,7 +635,7 @@ body {
 }
 
 .recipe__ingredients {
-  background-color: #fef2f2;
+  background-color: #f9fafb;
   flex-direction: column;
   align-items: center;
   padding: 5rem 8rem;
@@ -846,7 +846,7 @@ body {
 }
 
 .upload__column input:focus, .upload__column select:focus {
-  background-color: #fee2e2;
+  background-color: #f9fafb;
   border: 1px solid #dc2626;
   outline: none;
 }
@@ -874,7 +874,7 @@ body {
   color: #dc2626;
   cursor: pointer;
   z-index: 100;
-  background-color: #fecaca;
+  background-color: #fef2f2;
   border: none;
   border-radius: 15px;
   gap: 8px;
@@ -884,7 +884,7 @@ body {
 }
 
 #btn-mobile:hover, #btn-mobile.ativo {
-  background-color: #fca5a5;
+  background-color: #fecaca;
 }
 
 #hamburguer {
@@ -913,7 +913,7 @@ body {
 
   .nav__list {
     z-index: 200;
-    background-color: #fecaca;
+    background-color: #fee2e2;
     border-radius: 4px;
     width: auto;
     height: 80px;
@@ -1041,6 +1041,12 @@ body {
 
   .recipe__info {
     margin-right: 2rem !important;
+  }
+
+  .recipe__info .recipe__info-buttons .btn--tiny {
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-right: 5px;
   }
 
   .recipe__ingredients {
